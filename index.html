@@ -55,6 +55,8 @@
         <div class="home-img">
             <img src="Photos/VMEMUN 2022 Pic.jpeg" alt="">
         </div>
+        
+        <a href="#" class="float"><img src="./Photos/Dark Theme Icons/sun.png" id="icon"></a>
     </section>
 
     <!-- about section design -->
@@ -310,6 +312,19 @@
 
     <!-- custom js -->
     <script src="index.js"></script>
+    
+    <!-- light theme dark theme toggle -->
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function(){
+            document.body.classList.toggle("light-theme");
+            if(document.body.classList.contains("light-theme")){
+                icon.src = "./Photos/Dark Theme Icons/moon.png"
+            }else{
+                icon.src = "./Photos/Dark Theme Icons/sun.png"
+            }
+        }
+    </script
 
 </body>
 </html>
