@@ -148,6 +148,22 @@ span{
     color: var(--main-color);
 }
 
+
+.float{
+	position: fixed;
+	width:55px;
+	height:auto;
+	bottom:40px;
+	right:10px;
+	border-radius: 100%;
+	text-align:center;
+}
+
+.float img{
+    width: 30px;
+    cursor: pointer;
+}
+
 .home-content h1{
     font-size: 5.6rem;
     font-weight: 700;
