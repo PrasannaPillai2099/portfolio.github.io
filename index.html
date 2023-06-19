@@ -32,13 +32,13 @@
             <a href="#ContactMe">Contact Me</a>
         </nav>      
     </header>
-    
+     
     <!-- home section design -->
     <section class="home" id="Home">
         <div class="home-content">
             <h3>Hey there! I am </h3>
             <h1><span>Prasanna </span>Venkatesh Pillai</h1>
-            <h3>and I am interested in <span class="multiple-text"></span></h3>
+            <h3>and I am interested in <span class="multiple-text">  </span></h3>
             <p>| Student at Chennai Institute of Technology | B.E. Computer Science and Engineering(2021-2025) | Programmer in Python, SQL, C, Java | MUNs | Aspiring Web Developer | </p>
 
         <div class="social-media">
@@ -55,8 +55,6 @@
         <div class="home-img">
             <img src="Photos/VMEMUN 2022 Pic.jpeg" alt="">
         </div>
-        
-        <a href="#" class="float"><img src="./Photos/Dark Theme Icons/sun.png" id="icon"></a>
     </section>
 
     <!-- about section design -->
@@ -276,7 +274,7 @@
     <section class="contact" id="ContactMe">
     <h2 class="heading">Contact <span>Me!!</span></h2>
 
-    <form action="#">
+    <form onsubmit="sendEmail(); reset(); return false; ">
         <div class="input-box">
             <input type="text" placeholder="Full name">
             <input type="email" placeholder="Email Address">
@@ -312,19 +310,23 @@
 
     <!-- custom js -->
     <script src="index.js"></script>
-    
-    <!-- light theme dark theme toggle -->
-    <script>
-        var icon = document.getElementById("icon");
-        icon.onclick = function(){
-            document.body.classList.toggle("light-theme");
-            if(document.body.classList.contains("light-theme")){
-                icon.src = "./Photos/Dark Theme Icons/moon.png"
-            }else{
-                icon.src = "./Photos/Dark Theme Icons/sun.png"
-            }
-        }
-    </script
 
+    <!-- form sumbit js -->
+    <script src ="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "pillaiprasanna2474@gmail.com",
+            Password : "PrasannaVenkateshPillai301003@#$",
+            To : 'prasannapillai2099@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New contact form enquiry",
+            Body : "And this is the body"
+        }).then(
+        message => alert(message)
+        );
+        }
+    </script>
 </body>
 </html>

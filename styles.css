@@ -20,13 +20,6 @@
     --gradient: linear-gradient(to right, blue, lightblue, turquoise, cyan, blue);
 }
 
-.light-theme{
-        --bg-color: white;
-        --second-bg-color: rgb(248, 248, 248);
-        --primary-bg-color: white; 
-        --text-color: black;
-}
-
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -146,21 +139,6 @@ section{
 
 span{
     color: var(--main-color);
-}
-
-.float{
-	position: fixed;
-	width:55px;
-	height:auto;
-	bottom:40px;
-	right:10px;
-	border-radius: 100%;
-	text-align:center;
-}
-
-.float img{
-    width: 30px;
-    cursor: pointer;
 }
 
 .home-content h1{
